@@ -1,0 +1,10 @@
+.content {
+    margin-bottom: 3rem;
+}
+.page-card {
+    @apply bg-white shadow rounded p-5 mb-5 w-full;
+}
+
+.text-content {
+    @apply text-lg leading-tight;
+}

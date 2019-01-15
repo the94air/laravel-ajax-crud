@@ -1,0 +1,59 @@
+.table {
+    @apply w-full border-collapse;
+    background: config('colors.grey-lighter');
+    border-radius: 0.25em;
+    thead, tfoot {
+        @apply text-left uppercase;
+        color: config('colors.grey-darker');
+        th {
+            font-weight: 600;
+            background: #e9eef2;
+        }
+    }
+    thead {
+        border-bottom: 2px solid config('colors.grey');
+    }
+    tfoot {
+        border-top: 2px solid config('colors.grey');
+    }
+    td, th {
+        @apply py-2 px-4;
+        color: config('colors.grey-darker');
+    }
+    td {
+        border-bottom: 1px solid config('colors.grey');
+    }
+    tr:first-child th:first-child {
+        border-top-left-radius: 0.25em;
+    }
+    tr:first-child th:last-child {
+        border-top-right-radius: 0.25em;
+    }
+    tr:last-child td:first-child {
+        border-bottom-left-radius: 0.25em;
+    }
+    tr:last-child td:last-child {
+        border-bottom-right-radius: 0.25em;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+    tfoot {
+        tr:last-child th:first-child {
+            border-bottom-left-radius: 0.25em;
+        }
+        tr:last-child th:last-child {
+            border-bottom-right-radius: 0.25em;
+        }
+    }
+    .button {
+        @apply py-1 px-2 text-sm;
+        @apply block m-auto mb-1;
+        &:last-child {
+            @apply mb-0;
+        }
+        @screen md {
+            @apply inline-block mb-0;
+        }
+    }
+}

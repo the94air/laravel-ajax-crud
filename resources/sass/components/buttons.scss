@@ -1,0 +1,81 @@
+.button {
+    @apply inline-block text-center no-underline rounded-sm select-none align-middle whitespace-no-wrap px-4 py-2 leading-tight cursor-pointer;
+    font-weight: 600;
+    color: #606060 !important;
+    background-color: #dae1e7;
+    transform: scale(1);
+    transition: all 300ms ease;
+    &:hover {
+        @apply no-underline;
+        background: lighten(#dae1e7, 3%);
+        transform: scale(.985);
+    }
+    &:focus {
+        @apply outline-none shadow-button;
+    }
+    &:active {
+        transform: scale(.97);
+    }
+    &:disabled {
+        @apply pointer-events-none opacity-75;
+    }
+}
+a.success, button.success, [type="button"].success, [type="reset"].success, [type="submit"].success {
+    background-color: #cbf2cf;
+    &:hover {
+        background: lighten(#cbf2cf, 3%);
+    }
+}
+a.danger, button.danger, [type="button"].danger, [type="reset"].danger, [type="submit"].danger {
+    background-color: #ffd0cd;
+    &:hover {
+        background: lighten(#ffd0cd, 3%);
+    }
+}
+a.info, button.info, [type="button"].info, [type="reset"].info, [type="submit"].info {
+    background-color: #cef2f2;
+    &:hover {
+        background: lighten(#cef2f2, 3%);
+    }
+}
+a.warning, button.warning, [type="button"].warning, [type="reset"].warning, [type="submit"].warning {
+    background-color: #ffe1c6;
+    &:hover {
+        background: lighten(#ffe1c6, 3%);
+    }
+}
+a.github, button.github, [type="button"].github, [type="reset"].github, [type="submit"].github {
+    background-color: #f2f2f2;
+    &:hover {
+        background: lighten(#f2f2f2, 3%);
+    }
+}
+a.twitter, button.twitter, [type="button"].twitter, [type="reset"].twitter, [type="submit"].twitter {
+    background-color: #1ea1f2;
+    color: white !important;
+    &:hover {
+        background: lighten(#1ea1f2, 3%);
+    }
+}
+.button.loading {
+    &:after {
+        @apply hidden absolute;
+        font-family: 'Font Awesome 5 Solid';
+        content: "\f1ce";
+    }
+    .svg-inline--fa {
+        opacity: 0;
+        width: 0;
+        margin-left: 0;
+        transition: all ease 300ms;
+        // pointer-events: none;
+    }
+    &.loading-show .svg-inline--fa {
+        -webkit-animation: fa-spin 2s infinite linear;
+        animation: fa-spin 2s infinite linear;
+        opacity: 1;
+        width: 16px;
+        margin-left: 0.3rem;
+        // pointer-events: auto;
+    }
+}

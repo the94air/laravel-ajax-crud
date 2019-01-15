@@ -1,0 +1,11 @@
+.crud-header, .crud-content {
+    @apply mb-5;
+}
+.crud-meta {
+    p {
+        @apply text-grey-dark italic;
+    }
+}
+.not-found {
+    @apply text-center;
+}
