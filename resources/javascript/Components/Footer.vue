@@ -3,7 +3,7 @@
         <div class="footer">
             <div class="container">
                 <hr>
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap mt-8">
                     <div class="w-full md:w-1/2">
                         <p class="copy">&copy; Codolog {{ date }}</p>
                     </div>

@@ -9,12 +9,12 @@
                 </div>
                 <ul class="navbar-menu">
                     <li>
-                        <a target="_blank" class="button github" href="https://github.com/the94air/larastrator">
+                        <a target="_blank" class="button github" href="https://github.com/the94air/Laravel-ajax">
                             <Fa :icon="['fab', 'github']" /> <span class="text-md">Fork on GitHub</span>
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" class="button github" href="https://github.com/the94air/larastrator">
+                        <a target="_blank" class="button github" href="https://github.com/the94air/Laravel-ajax">
                             <Fa :icon="['fas', 'star']" /> <span class="text-md">Give us star</span>
                         </a>
                     </li>
