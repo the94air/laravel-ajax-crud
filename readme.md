@@ -32,9 +32,10 @@ composer update
 ```bash
 php artisan migrate
 ```
-6. Done!
+6. Done!  
+
 7. Optional: Install npm dependencies to modify `sass` and `vue` files:
 ```
-npm update
+npm install
 npm run dev
 ```
