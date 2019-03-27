@@ -18,7 +18,7 @@ composer create-project --prefer-dist laravel/laravel [Your project name]
 ```
 `🔥 Pro Tip:` make sure you have [Composer](https://getcomposer.org) installed.
 
-2. Install npm dependencies to compile `SASS` and `JavaScript`:
+2. Install NPM dependencies to compile `SASS` and `JavaScript`:
 ```bash
 npm install
 ```
@@ -53,7 +53,7 @@ DB_PASSWORD=[Your MySQL Password]
 1. Since we don't need the authentication system, let's copy the auth migrations to another directory inside the `database` directory so we can use them later. Let's call it `trash`.  
 <small>📍Copy files inside `database/migration` to new directory `database/trash`</small>
 
-2. Let's create migration, factory, and resource controller for our model `Item`:
+2. Let's create a migration, factory, and resource controller for our model `Item`:
 ```
 php artisan make:model Item --all
 ```
@@ -123,7 +123,7 @@ public function run()
 php artisan db:seed
 ```
 
-9. You should find that the data has been seeded successfuly to your database.
+9. You should find that the data has been seeded successfully to your database.
 
 ## HTTP routes
 
@@ -158,18 +158,18 @@ Route::delete('/items/{item}', 'ItemController@destroy')->name('items.destroy');
 php artisan make:controller HomeController
 ```
 
-2. Lets add the `index` method for the home route and return the home page `view` that we will add later on:
+2. Let's add the `index` method for the home route and return the home page `view` that we will add later on:
 ```php
 class HomeController extends Controller
 {
     public function index() {
-    	return view('index');
+        return view('index');
     }
 }
 ```
 <small>📍`app/Http/Controllers/HomeController.php`</small>
 
-4. Lets add the `item` methods for each http request. You can delete the `create` and `update` methods because we don't need them in our application:
+4. Let's add the `item` methods for each HTTP request. You can delete the `create` and `update` methods because we don't need them in our application:
 ```php
 class ItemController extends Controller
 {
@@ -260,7 +260,7 @@ class ItemController extends Controller
 
 ## Form Requests and Validation
 
-1. Some requests needs to be validated before it can goes to the database; Like the `store` and the `update` routes. let's create two form request for both routes:
+1. Some requests need to be validated before it can go to the database; Like the `store` and the `update` routes. let's create two form request for both routes:
 ```bash
 php artisan make:request StoreItemRequest
 php artisan make:request UpdateItemRequest
@@ -329,7 +329,7 @@ use App\Http\Requests\UpdateItemRequest;
 
 class ItemController extends Controller
 {
-	// ...
+    // ...
 
     /**
      * Store a newly created resource in storage.
@@ -339,7 +339,7 @@ class ItemController extends Controller
      */
     public function store(StoreItemRequest $request)
     {
-		// ...
+        // ...
     }
 
     // ...
@@ -356,7 +356,7 @@ class ItemController extends Controller
         // ...
     }
 
-	// ...
+    // ...
 }
 ```
 <small>📍`app/Http/Controllers/ItemController.php`</small>  
@@ -435,13 +435,13 @@ mix.js('resources/js/app.js', 'public/js')
 
 ## Tailwindcss
 
-1. We will be using the power of `Tailwindcss` to write `SASS`. let's install tailwindcss using npm:
+1. We will be using the power of `tailwindcss` to write `SASS`. let's install `tailwindcss` using NPM:
 ```bash
 npm i tailwindcss --save-dev
 ```
-`🔥 Pro Tip:` To find more about how to use tailwindcss, checkout the [documentation](https://tailwindcss.com/docs/installation).
+`🔥 Pro Tip:` To find more about how to use `tailwindcss`, check out the [documentation](https://tailwindcss.com/docs/installation).
 
-2. To use tailwindcss, we need to generate a new `tailwind.js` configuration file:
+2. To use `tailwindcss`, we need to generate a new `tailwind.js` configuration file:
 ```bash
 npx tailwind init
 ```
@@ -506,17 +506,17 @@ mix.js('resources/js/app.js', 'public/js')
 ```
 <small>📍`webpack.mix.js`</small>
 
-5. We are ready to start writing `SASS` by running the developement script:
+5. We are ready to start writing `SASS` by running the development script:
 ```bash
 npm run watch
 ```
 
-7. Because this isn't a `SASS` tutorial, you can find the `SASS` files on the project [GitHub](https://github.com/the94air/laravel-ajax-crud/tree/master/resources) repostory.  
-`🔥 Pro Tip:` If you want to find more about `SASS` language, checkout the [documentation](https://sass-lang.com/guide).
+7. Because this isn't a `SASS` tutorial, you can find the `SASS` files on the project [GitHub](https://github.com/the94air/laravel-ajax-crud/tree/master/resources) repository.  
+`🔥 Pro Tip:` If you want to find more about `SASS` language, check out the [documentation](https://sass-lang.com/guide).
 
 ## Vue and Vue-router
 
-1. To create our single page application for the CRUD functionality, we need to install `vue` via npm:
+1. To create our single page application for the CRUD functionality, we need to install `vue` via NPM:
 ```bash
 npm i vue --save
 ```
@@ -533,7 +533,7 @@ npm i vue --save
 ```
 <small>📍`resources/views/index.blade.php`</small>
 
-3. We can start by creating a new vue instence in our `app.js` file. We also gonna need to create 2 other files, One for the main application component called `App.vue` inside directory `Main`. The other for importing all javascript libaries before we mount the app called `boorstrap.js`:
+3. We can start by creating a new `vue` instance in our `app.js` file. We also gonna need to create 2 other files, One for the main application component called `App.vue` inside directory `Main`. The other for importing all javascript libraries before we mount the app called `boorstrap.js`:
 ```js
 import Vue from 'vue';
 import App from './Main/App';
@@ -646,7 +646,7 @@ export default form;
 ```
 <small>📍`resources/js/form.js`</small>
 
-5. A small change need to be add to fix the `container` class alignment. Currently the `container` is aligned to left and we need to have it centered. To do so, we will edit the tailwindcss configuration:
+5. A small change needs to be added to fix the `container` class alignment. Currently, the `container` is aligned to the left and we need to have it centered. To do so, we will edit the `tailwindcss` configuration:
 ```diff
 plugins: [
     require('tailwindcss/plugins/container')({
@@ -673,7 +673,7 @@ mix.js('resources/js/app.js', 'public/js')
 ```
 <small>📍`webpack.mix.js`</small>
 
-6. Now, we are going to focus on the `CRUD` component located inside of the `Content` component. We will be using `vue-router` to switch between the CRUD components. We need to install `vue-router` and create a configuration file called `router.js`, so it can be add to our vue instance in `app.js`. The `CRUD` component will be our router entry:
+6. Now, we are going to focus on the `CRUD` component located inside of the `Content` component. We will be using `vue-router` to switch between the CRUD components. We need to install `vue-router` and create a configuration file called `router.js`, so it can be added to our `vue` instance in `app.js`. The `CRUD` component will be our router entry:
 ```bash
 npm i vue-router --save
 ```
@@ -744,7 +744,7 @@ export default app;
 
 ## AJAX and Axios
 
-1. To make AJAX call we need the url of every http request to submit the form. We will be using a package called `Ziggy` to use the `route()` function inside our javascript:
+1. To make AJAX call we need the URL of every HTTP request to submit the form. We will be using a package called `Ziggy` to use the `route()` function inside our javascript:
 ```bash
 composer require tightenco/ziggy
 ```
@@ -1257,7 +1257,7 @@ class Item extends Model
 ```
 <small>📍`app/Item.php`</small>
 
-4. You version you assets when compiling to production using the if statment inside `webpack.mix.js`:
+4. You can version your assets when compiling to production using the if statement inside `webpack.mix.js`:
 ```diff
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
