@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'ItemController@home')->name('home');
+// Home route
+Route::get('/', 'HomeController@index')->name('index');
 
 // Items CRUD routes
 Route::get('/items', 'ItemController@index')->name('items.index');

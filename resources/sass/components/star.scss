@@ -5,18 +5,13 @@
     }
     .star-card {
         @apply flex flex-wrap items-center shadow-md rounded p-5 mb-5 w-full text-center;
+        background: white;
         transform: scale(1);
-        outline: 1px dashed rgba(255, 255, 255, 0.6);
-        outline-offset: -3px;
+        outline: 1px dashed rgba(33, 41, 47, 0.3);
+        outline-offset: -4px;
         transition: all 300ms ease;
         @screen md {
             @apply text-left;
-        }
-        &.larastrator {
-            background: linear-gradient( 135deg, lighten(#FD6585, 10%) 10%, #FD6585 100%);
-        }
-        &.codolog {
-            background: linear-gradient( 135deg, lighten(#0396FF, 10%) 10%, #0396FF 100%);
         }
         .star-card-img {
             @apply w-full mb-3;
@@ -30,8 +25,7 @@
             }
         }
         .star-card-text {
-            @apply w-full text-white;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+            @apply w-full text-black;
             @screen md {
                 @apply w-3/4;
             }

@@ -1,0 +1,44 @@
+html {
+    @apply text-grey-darkest;
+    background-color: #f2f2f2;
+}
+
+body {
+    @apply w-full h-full;
+    font-family: 'Source Sans Pro', system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+}
+
+::selection {
+    background-color: rgba(33, 150, 243, 0.3);
+    text-shadow: none;
+}
+
+a {
+    @apply text-grey-dark underline;
+    transition: color 100ms ease;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    @apply text-grey;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+hr {
+    @apply h-px my-4 bg-grey-light;
+}

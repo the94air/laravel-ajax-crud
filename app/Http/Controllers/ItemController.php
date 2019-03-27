@@ -10,16 +10,6 @@ use App\Http\Requests\UpdateItemRequest;
 class ItemController extends Controller
 {
     /**
-     * Display the home page.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function home()
-    {
-        return view('home');
-    }
-
-    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -69,7 +59,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateItemRequest  $request
+     * @param  App\Http\Requests\UpdateItemRequest  $request
      * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */

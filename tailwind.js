@@ -195,7 +195,6 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'Source\\ Sans\\ Pro',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -210,7 +209,6 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
-      'Source\\ Sans\\ Pro',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -774,12 +772,8 @@ module.exports = {
     'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    'outline': '0 0 0 3px rgba(52,144,220,0.5)',
     'none': 'none',
-
-    'outline': '0 0 0 3px rgba(30, 161, 242, 0.2)',
-    'button': '0 0 0 2px rgba(33, 150, 243, 0.3)',
-    'alert': '0 1px 1px 0px rgba(0, 0, 0, 0.1)',
-    'navbar': '0 15px 30px 0 rgba(0, 0, 0, .02), 0 5px 15px 0 rgba(0, 0, 0, .05)',
   },
 
 

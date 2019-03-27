@@ -1,5 +1,6 @@
 .navbar {
-    @apply bg-white shadow-navbar py-2 px-4;
+    @apply bg-white py-2 px-4;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .02), 0 5px 15px 0 rgba(0, 0, 0, .05);
     &.navbar-fixed {
         @apply fixed pin-t pin-l pin-r z-30;
     }
