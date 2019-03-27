@@ -13,16 +13,16 @@
 ## Installation and configurations:
 
 1. Install laravel in a new project directory:
-```
+```bash
 composer create-project --prefer-dist laravel/laravel [Your project name]
 ```
-<small>make sure you have [Composer](https://getcomposer.org) installed</small>
+`🔥 Pro Tip:` make sure you have [Composer](https://getcomposer.org) installed.
 
 2. Install npm dependencies to compile `SASS` and `JavaScript`:
-```
+```bash
 npm install
 ```
-<small>make sure you have [Nodejs](https://nodejs.org) installed</small>
+`🔥 Pro Tip:` make sure you have [Nodejs](https://nodejs.org) installed.
 
 3. Create a new database. I am using `MySQL`:
 ```bash
@@ -50,7 +50,7 @@ DB_PASSWORD=[Your MySQL Password]
 
 ## Database model, migration, and seeds
 
-1. Since we don't need the authentication system, let's copy the auth migrations to another directory inside the `database` directory so we can use them later. Let's call it `trash`.
+1. Since we don't need the authentication system, let's copy the auth migrations to another directory inside the `database` directory so we can use them later. Let's call it `trash`.  
 <small>📍Copy files inside `database/migration` to new directory `database/trash`</small>
 
 2. Let's create migration, factory, and resource controller for our model `Item`:
@@ -70,7 +70,7 @@ public function up()
     });
 }
 ```
-<small>📍`database/migration/xxxx_xx_xx_xxxxxx_create_items_table.php`</small>
+<small>📍`database/migration/xxxx_xx_xx_xxxxxx_create_items_table.php`</small>  
 `🔥 Pro Tip:` you can find all migration columns in the [documentation](https://laravel.com/docs/migrations#columns).
 
 4. Make the database fields fillable in the `Item` model:
@@ -93,7 +93,7 @@ $factory->define(App\Item::class, function (Faker $faker) {
     ];
 });
 ```
-<small>📍`database/factories/ItemFactory.php`</small>
+<small>📍`database/factories/ItemFactory.php`</small>  
 `🔥 Pro Tip:` you can find all the available faker formatters in the `Faker` project [README](https://github.com/fzaninotto/Faker#formatters).
 
 6. Create database seeder for `Item` table:
@@ -146,9 +146,9 @@ Route::patch('/items/{item}', 'ItemController@update')->name('items.update');
 // For deleting an item
 Route::delete('/items/{item}', 'ItemController@destroy')->name('items.destroy');
 ```
-<small>📍`routes/web.php`</small>
-`🔥 Pro Tip:` you can find all the available router methods in the [documentation](https://github.com/fzaninotto/Faker#formatters).
-`🔥 Pro Tip:` after creating the routes then comes the `controllers` and the `views`.
+<small>📍`routes/web.php`</small>  
+`🔥 Pro Tip:` you can find all the available router methods in the [documentation](https://github.com/fzaninotto/Faker#formatters).  
+`🔥 Pro Tip:` after creating the routes then comes the `controllers` and the `views`.  
 `🔥 Pro Tip:` you can also add middlewares to any route you have but, for the sake of simplisity we don't don't have to add any middleware to our current routes. More about middleware in the [documentation](https://laravel.com/docs/5.8/middleware#registering-middleware).
 
 ## HTTP Controllers
@@ -255,7 +255,7 @@ class ItemController extends Controller
     }
 }
 ```
-<small>📍`app/Http/Controllers/ItemController.php`</small>
+<small>📍`app/Http/Controllers/ItemController.php`</small>  
 `🔥 Pro Tip:` you can find all the available Laravel eloquent methods in the [documentation](https://laravel.com/docs/5.8/eloquent#introduction).
 
 ## Form Requests and Validation
@@ -359,7 +359,7 @@ class ItemController extends Controller
 	// ...
 }
 ```
-<small>📍`app/Http/Controllers/ItemController.php`</small>
+<small>📍`app/Http/Controllers/ItemController.php`</small>  
 `🔥 Pro Tip:` you can find all the available Laravel validation rules in the [documentation](https://laravel.com/docs/5.8/validation#available-validation-rules).
 
 3. We also need to validate the route parameter `item` we used on the controller routes. The validation pattern should be added to the `RouteServiceProvider` in the `boot` method:
@@ -419,7 +419,7 @@ public function boot()
 </body>
 </html>
 ```
-<small>📍`resources/views/index.blade.php`</small>
+<small>📍`resources/views/index.blade.php`</small>  
 `🔥 Pro Tip:` you can remove the `welcome.blade.php` view because we don't need it in our project.
 
 ## Bundling assets
@@ -511,7 +511,7 @@ mix.js('resources/js/app.js', 'public/js')
 npm run watch
 ```
 
-7. Because this isn't a `SASS` tutorial, you can find the `SASS` files on the project [GitHub](https://github.com/the94air/laravel-ajax-crud/tree/master/resources) repostory.
+7. Because this isn't a `SASS` tutorial, you can find the `SASS` files on the project [GitHub](https://github.com/the94air/laravel-ajax-crud/tree/master/resources) repostory.  
 `🔥 Pro Tip:` If you want to find more about `SASS` language, checkout the [documentation](https://sass-lang.com/guide).
 
 ## Vue and Vue-router
