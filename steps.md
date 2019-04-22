@@ -1216,7 +1216,7 @@ composer require tightenco/ziggy
     }
 </script>
 ```
-<small>📍`resources/js/Components/Items/Delete.vue`</small>
+<small>📍`resources/js/Components/Items/Delete.vue`</small>  
 `🔥 Pro Tip:` I need to mention that you should be careful about redirecting after the creation and the edition requests in case user need to do that multiple times. It's so annoying for the user to go back over and over to submit the form again but it's not an issue in our case. Thanks to [@DesTheDev](https://github.com/DesTheDev) suggestion in this part - [#1](https://github.com/the94air/laravel-ajax-crud/issues/1).
 
 3. To show the correct date, we need to configure the date fields inside of our `Items` model:
