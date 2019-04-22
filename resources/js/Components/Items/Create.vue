@@ -87,7 +87,6 @@
                     self.clear();
                     form.note('Create request succeeded.', 8000);
                     self.errors = {};
-                    self.router.push({ name: 'items.index' });
                 })
                 .catch(err => {
                     self.errors = form.errors(err);
