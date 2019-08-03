@@ -36,14 +36,19 @@ DB_PASSWORD=secret
 composer update
 ```
 
-5. migrate the database:
+5. Run:
 ```bash
-php artisan migrate
+php artisan key:generate
 ```
 
-6. Done!  
+6. migrate and seed the database:
+```bash
+php artisan migrate --seed
+```
 
-7. Optional: Install npm dependencies to modify `sass` and `vue` files:
+7. Done!  
+
+8. Optional: Install npm dependencies to modify `sass` and `vue` files:
 ```bash
 npm install
 npm run dev
